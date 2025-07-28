@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #133f49;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .circle-wrapper{
+            position: relative;
+            width: 320px;
+            height: 320px;
+
+        }
+        .rotating-border{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(#00f5ff 0deg, #0f1c2e 40deg, #0f1c2e 360deg) ;
+            animation: spin 4s linear infinite;
+            z-index: 1;
+
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .login-box{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 290px;
+            height: 290px;
+            background: #131e32;
+            border-radius: 50%;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+        }
+        .login-box h2{
+            margin-bottom: 20px;
+            color: #00f5ff;
+        }
+        .login-box input{
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 20px;
+            background: #0f1c2e;
+            columns: white;
+            outline: none;
+            text-align: center;
+
+        }
+        .login-box forget{
+            color: #999;
+            font-size: 12px;
+            margin: 5px 0;
+            display: inline-block;
+            text-decoration: none;
+
+
+        }
+        .login-box button{
+            margin-top: 10px;
+            padding: 10px 30px;
+            border: none;
+            background: #00f5ff;
+            color: #000;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login-box button:hover{
+            background: #02cfd1;
+
+        }
+        .signup{
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-wrapper">
+        <div class="rotating-border"></div>
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#" class="forget">Forget Your Password</a><br>
+                <button type="submit" >Login </button><br>
+                <a class="signup">signup</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
